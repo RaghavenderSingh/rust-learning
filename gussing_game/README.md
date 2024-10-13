@@ -19,7 +19,7 @@ Ensure you have Rust installed on your system. If not, install it from [https://
 
    ```
    
-   git clone https://github.com/yourusername/rust-learning/edit/main/gussing_game
+   git clone https://github.com/yourusername/rust-learning/gussing_game
    cd rust-guessing-game
    ```
 
