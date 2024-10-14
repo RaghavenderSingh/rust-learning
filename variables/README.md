@@ -1,76 +1,85 @@
 # Rust Variables Demo
 
-This project demonstrates basic variable concepts in Rust, including immutability, mutability, shadowing, and constants.
+A simple demonstration of variable concepts in Rust, including immutability, mutability, shadowing, and constants.
 
-## Overview
+## Features
 
-The main program showcases the following Rust concepts:
+- Immutable variables
+- Variable shadowing
+- Mutable variables
+- Constants
+- Print statements to display variable values
 
-1. Immutable variables
-2. Variable shadowing
-3. Mutable variables
-4. Constants
+## Prerequisites
+
+Ensure you have Rust installed on your system. If not, install it from [https://www.rust-lang.org/](https://www.rust-lang.org/).
+
+## Installation
+
+1. Clone the repository:
+
+   ```
+   git clone https://github.com/yourusername/rust-variables-demo
+   cd rust-variables-demo
+   ```
+
+2. Build the project:
+   ```
+   cargo build
+   ```
+
+## Running the Demo
+
+To run the demonstration, execute:
+
+```
+cargo run
+```
+
+The program will display the values of variables at different stages, illustrating Rust's variable concepts.
 
 ## Code Explanation
 
-### Immutable Variables
+The demo covers the following concepts:
 
-```rust
-let x = 10;
-```
-
-By default, variables in Rust are immutable. Once a value is bound to a name, you can't change that value.
-
-### Shadowing
-
-```rust
-let x = 10;
-// ...
-let x = "six";
-```
-
-Rust allows you to declare a new variable with the same name as a previous variable. This is known as shadowing. It's different from marking a variable as mutable.
-
-### Mutable Variables
-
-```rust
-let mut y = 10;
-y = 30;
-```
-
-To make a variable mutable, we use the `mut` keyword. This allows you to change the value bound to the variable.
-
-### Constants
-
-```rust
-const RUST_CONST_VARIABLE: u32 = 30;
-```
-
-Constants in Rust are always immutable and must be type annotated. By convention, they are named using SCREAMING_SNAKE_CASE.
-
-## Running the Program
-
-To run this program:
-
-1. Ensure you have Rust installed on your system.
-2. Save the code in a file with a `.rs` extension (e.g., `main.rs`).
-3. Open a terminal and navigate to the directory containing the file.
-4. Run the following command:
-
-   ```
-   rustc main.rs
-   ./main
+1. Immutable variables:
+   ```rust
+   let x = 10;
    ```
 
-This will compile and run the program, displaying the output in the terminal.
+2. Variable shadowing:
+   ```rust
+   let x = 10;
+   let x = "six";
+   ```
+
+3. Mutable variables:
+   ```rust
+   let mut y = 10;
+   y = 30;
+   ```
+
+4. Constants:
+   ```rust
+   const RUST_CONST_VARIABLE: u32 = 30;
+   ```
+
+## Project Structure
+
+- `src/main.rs`: Contains the main demonstration code.
+- `Cargo.toml`: The manifest file for Rust's package manager, cargo.
+
+## Dependencies
+
+This project doesn't use any external crates. It only uses Rust's standard library.
 
 ## Learning Outcomes
 
-After studying this code, you should understand:
+After running and studying this demo, you should understand:
 
-- The default immutability of variables in Rust
-- How to use shadowing to reuse variable names
-- How to create mutable variables
-- How to declare and use constants
+- How Rust handles variable immutability by default
+- The concept of shadowing and how it differs from mutability
+- How to create and use mutable variables
+- How to declare and use constants in Rust
 
-This demo serves as a basic introduction to variable handling in Rust, which is fundamental to understanding Rust's ownership and borrowing concepts.
+This demonstration serves as a foundation for understanding Rust's more advanced concepts like ownership and borrowing.
